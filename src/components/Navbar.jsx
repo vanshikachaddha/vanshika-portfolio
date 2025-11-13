@@ -33,16 +33,14 @@ const Navbar = () => {
 
   return (
     <nav className="w-full flex justify-end items-center py-6 px-8 fixed top-0 z-[999] font-oswald">
-      <ul className="flex items-center gap-4 text-white text-sm uppercase tracking-wider font-medium">
+      <ul className="flex items-center text-white text-sm uppercase tracking-wider font-medium">
         {navLinks.map((link, index) => (
           <li key={link.id} className="flex items-center">
-            {index > 0 && <span className="mx-2">/</span>}
+            {index > 0 && <span className="mx-4">/</span>}
             <a
               href={`#${link.id}`}
               onClick={(e) => handleNavClick(e, link.id)}
-              className={`transition-all duration-300 ${
-                active === link.id ? 'underline' : 'hover:underline'
-              }`}
+              className="transition-all duration-300"
             >
               {link.title}
             </a>

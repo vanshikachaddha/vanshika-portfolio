@@ -11,7 +11,7 @@ const Hero = () => {
   
   // Multiple text options
   const textOptions = [
-    { firstLine: "Hai, I'm", secondLine: "Vanshika" },
+    { firstLine: "Hi, I'm", secondLine: "Vanshika" },
     { firstLine: "I love", secondLine: "Data" },
     { firstLine: "I write", secondLine: "Code" },
     { firstLine: "I solve", secondLine: "Problems" },
@@ -29,8 +29,19 @@ const Hero = () => {
       setBgColor(randomColor)
     }, 6000)
 
+    // Auto-rotate text options
+    const textInterval = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % textOptions.length
+        // Reset striped letters when changing text
+        setStripedLetters(new Set())
+        return nextIndex
+      })
+    }, 5000) // Change text every 5 seconds
+
     return () => {
       clearInterval(colorInterval)
+      clearInterval(textInterval)
     }
   }, [])
 

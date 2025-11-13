@@ -247,7 +247,7 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-black text-2xl font-bold mb-1 uppercase" style={{ fontFamily: "'Oswald', sans-serif" }}>B.S. COMPUTER ENGINEERING</h3>
-                  <p className="text-gray-600 text-sm" style={{ fontFamily: "'Oswald', sans-serif" }}>Boston University • Expected May 2026</p>
+                  <p className="text-gray-600 text-sm" style={{ fontFamily: "'Oswald', sans-serif" }}>Machine Learning Concentration • Expected May 2026</p>
                 </div>
               </div>
             </motion.div>
